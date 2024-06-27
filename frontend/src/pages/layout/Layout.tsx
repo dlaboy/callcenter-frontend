@@ -14,12 +14,12 @@ const Layout = () => {
     const {userLanguage,setLanguage} = useContext(darkContext)
 
     // Function to change the language
-    const changeLanguage = (lang) => {
+    const changeLanguage = (lang:string) => {
       setLanguage(lang);
     };
   
     // Texts in different languages
-    const texts = {
+    const texts:{ [key: string]: { darkMode: string, lightMode:string } } = {
       en: {
         darkMode: 'Dark',
         lightMode: 'Light ',
